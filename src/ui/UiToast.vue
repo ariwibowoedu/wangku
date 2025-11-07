@@ -7,6 +7,7 @@
         class="px-4 py-3 rounded-lg shadow-lg border-r-8 flex items-center gap-2 min-w-[220px] max-w-xs text-sm font-medium"
         :class="toastClasses(toast.type)"
       >
+        <feather-icon icon="info" classes="w-4 h-4" />
         <span>{{ toast.message }}</span>
       </div>
     </transition-group>
@@ -15,6 +16,7 @@
 
 <script setup>
 import { useToast } from '@/stores/toast'
+import FeatherIcon from './FeatherIcon.vue'
 const { toasts } = useToast()
 
 const toastClasses = (type) => {

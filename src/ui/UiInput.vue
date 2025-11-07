@@ -28,7 +28,8 @@
       v-if="type === 'password'"
       type="button"
       @click="togglePassword"
-      class="absolute top-1/2 right-3 -translate-y-1/2 flex items-center justify-center w-9 h-9 rounded-lg hover:bg-gray-200 hover:dark:bg-gray-700 transition"
+      class="absolute right-3 -translate-y-1/2 flex items-center justify-center w-9 h-9 rounded-lg hover:bg-gray-200 hover:dark:bg-gray-700 transition"
+      :class="error ? 'top-6' : 'top-7'"
       :aria-label="showPassword ? 'Hide password' : 'Show password'"
     >
       <span v-if="showPassword">

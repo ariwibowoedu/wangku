@@ -1,3 +1,9 @@
+<script setup>
+import LayoutComp from './layout/LayoutComp.vue'
+</script>
+
 <template>
-  <div>Dashboard</div>
+  <layout-comp>
+    <div>Dashboard</div>
+  </layout-comp>
 </template>

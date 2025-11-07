@@ -34,9 +34,16 @@ export const useAuthStore = defineStore('auth', () => {
     }
 
 
+    async function signOut() {
+        isLoggedIn.value = false
+        router.push('/')
+    }
+
+
     return {
         loading,
         isLoggedIn,
-        signIn
+        signIn,
+        signOut
     }
 })

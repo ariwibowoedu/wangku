@@ -30,7 +30,11 @@ async function submitLogin() {
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col items-center justify-center px-4">
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 relative">
+    <div class="absolute top-0 left-0 p-4 rounded bg-green-200 m-2">
+      <p>email: test@test.com</p>
+      <p>password: 123123</p>
+    </div>
     <div class="w-full max-w-md bg-light-overlay rounded-2xl shadow-xl overflow-hidden">
       <div class="p-8">
         <div class="flex justify-center items-center my-4">
