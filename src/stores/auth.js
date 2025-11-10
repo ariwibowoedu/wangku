@@ -5,8 +5,7 @@ import { useRouter } from "vue-router";
 
 export const useAuthStore = defineStore('auth', () => {
     const loading = ref(false)
-    // const user = ref([])
-    const isLoggedIn = ref(false)
+    const isLoggedIn = ref(true)
     const toast = useToast()
     const router = useRouter()
 

@@ -1,7 +1,7 @@
 <script setup>
 import UiModal from '@/ui/UiModal.vue'
 import UiButton from '@/ui/UiButton.vue'
-import FeatherIcon from '@/ui/FeatherIcon.vue'
+import IconOir from '@/ui/IconOir.vue'
 
 import { useAuthStore } from '@/stores/auth'
 import { useModal } from '@/stores/modal'
@@ -17,7 +17,12 @@ const links = [
   {
     to: '/dashboard',
     label: 'Dashboard',
-    icon: 'home',
+    icon: 'HomeSimple',
+  },
+  {
+    to: '/form',
+    label: 'New',
+    icon: 'PlusCircle',
   },
 ]
 
@@ -74,10 +79,7 @@ const confirmLogout = () => {
           class="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-800 transition group"
           active-class="bg-indigo-600/20 text-indigo-400"
         >
-          <feather-icon
-            :icon="link.icon"
-            classes="w-5 h-5 group-hover:text-indigo-400 flex-shrink-0"
-          />
+          <icon-oir :name="link.icon" classes="w-6 h-6" />
           <div
             class="overflow-hidden transition-all duration-300"
             :class="sidebarOpen || hovering ? 'w-40 opacity-100' : 'w-0 opacity-0'"
@@ -86,12 +88,12 @@ const confirmLogout = () => {
           </div>
         </router-link>
       </nav>
-      <div class="p-4 border-t border-gray-800">
+      <div class="p-3 border-t border-gray-800">
         <button
           @click="openLogout"
           class="flex items-center gap-3 p-2 rounded-lg hover:bg-red-800 transition group"
         >
-          <feather-icon icon="log-out" class="w-5 h-5 group-hover:text-red-200 flex-shrink-0" />
+          <icon-oir name="LogOut" classes="w-6 h-6" />
           <div
             class="overflow-hidden transition-all duration-300"
             :class="sidebarOpen || hovering ? 'w-40 opacity-100' : 'w-0 opacity-0'"

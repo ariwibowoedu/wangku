@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
+    "@iconoir/vue": "^7.11.0",
     "feather-icons": "^4.29.2",
     "pinia": "^3.0.3",
     "vue": "^3.5.18",

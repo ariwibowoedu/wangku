@@ -19,6 +19,13 @@ const router = createRouter({
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path: '/form',
+      component: () => import('@/pages/dashboard/transactions/TransactionForm.vue'),
+      meta: {
+        requiresAuth: true
+      }
     }
   ],
 })
